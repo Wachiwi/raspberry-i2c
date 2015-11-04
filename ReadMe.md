@@ -18,9 +18,10 @@ Um die Problematik der Schreib-/Lese-Synchronisation zu umgehen, wird immer der 
 
 ### Testprotokoll
 
-- [ ] I²C Initialisierung
-- [ ] I²C Master-Slave-Konfiguration
-- [ ] I²C Kommunikation
+- [x] I²C Initialisierung
+- [x] I²C Master-Slave-Konfiguration
+- [x] I²C Kommunikation
+- [x] I²C logging to file
 - [ ] C++: GUI Event-Handling
 - [ ] C++: Auslesen der Messdaten
 
