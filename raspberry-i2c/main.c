@@ -57,7 +57,7 @@ int main(int argc, const char * argv[]) {
 				char *s = malloc(sizeof(int) + 2);
 				printf("Measured distance: %dcm\n", distance[0]);
 				sprintf(s, "%d\n", distance[0]);
-				write(lfd, s, sizeof(int) + 2);
+				write(lfd, s, sizeof(int));
 				// free(s);
 			}
 
