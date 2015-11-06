@@ -44,8 +44,8 @@ int main(int argc, const char * argv[]) {
 		// printf("DEBUG: FW version: %d\n", fw_version);
 
 		do {
-			int *distance = malloc(3 * sizeof(int)),
-					*delta_time = malloc(3 * sizeof(int));
+			int *distance = malloc(3 * sizeof(int));
+			int	*delta_time = malloc(3 * sizeof(int));
 
 			// Start Measurement
 			get_distance_cm(&i2c_desc, distance);
@@ -58,14 +58,14 @@ int main(int argc, const char * argv[]) {
 				printf("Measured distance: %dcm\n", distance[0]);
 				sprintf(s, "%d\n", distance[0]);
 				write(lfd, s, sizeof(int));
-				// free(s);
+				free(s);
 			}
 
 			// Wait 1s before repeating measurement process
 			wait_s(1);
 
-			// free(distance);
-			// free(delta_time);
+			free(distance);
+			free(delta_time);
 
 			// Total execution time of loop is around 1.1-1.2s
 		} while(1);

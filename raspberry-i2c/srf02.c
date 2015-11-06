@@ -80,7 +80,6 @@ int  get_firmware_version(int *fd) {
  */
 void get_distance_cm(int *fd, int *values) {
 	int status = 0;
-	// values = malloc(3 * sizeof(int));
 
 	status = write_i2c_byte_data(fd, SRF02_R0, SRF02_MEASURE_CM);
 
@@ -115,7 +114,6 @@ void get_distance_cm(int *fd, int *values) {
  */
 void get_time_mcs(int *fd, int *values) {
 	int status = 0;
-	// values = malloc(3 * sizeof(int));
 
 	status = write_i2c_byte_data(fd, SRF02_R0, SRF02_MEASURE_MCS);
 
