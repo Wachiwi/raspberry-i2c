@@ -24,7 +24,8 @@
 
 #include "srf02.h"
 
-/* Method that puts the program to sleep for a given time.
+/**
+ * Method that puts the program to sleep for a given time.
  *
  * @param ns - Specifies the nanoseconds you want to sleep.
  */
@@ -34,7 +35,8 @@ void wait_ns(long ns) {
 	nanosleep(&req, NULL);
 }
 
-/* Method that puts the program to sleep for a given time.
+/**
+ * Method that puts the program to sleep for a given time.
  *
  * @param ns - Specifies the milliseconds you want to sleep.
  */
@@ -46,7 +48,8 @@ void wait_ms(long ms) {
 	}
 }
 
-/* Method that puts the program to sleep for a given time.
+/**
+ * Method that puts the program to sleep for a given time.
  *
  * @param ss - Specifies the seconds you want to sleep.
  */
@@ -58,7 +61,8 @@ void wait_s(long s){
 	}
 }
 
-/* Simple method to read the firmware version of the sensor.
+/**
+ * Simple method to read the firmware version of the sensor.
  *
  * @param fd - This is the reference to the file handle of the opened i2c-bus.
  *
@@ -69,14 +73,15 @@ int  get_firmware_version(int *fd) {
 }
 
 
-/* Simple method to read the measured distance of the srf02 sensor.
+/**
+ * Simple method to read the measured distance of the srf02 sensor.
  *
  * @param fd 		 - This is the reference to the file handle of the opened i2c-bus.
  * @param values - This is the reference to a variable owned by the caller that will 
  *								 contain the measured values as an array:
- * 								 	[0] = calculated distance by adding the lowbyte to the highbyte
- * 									[1] = highbyte of measurement
- * 									[2] = lowbyte of measurement
+ * 								 	[0] => calculated distance by adding the lowbyte to the highbyte
+ * 									[1] => highbyte of measurement
+ * 									[2] => lowbyte of measurement
  */
 void get_distance_cm(int *fd, int *values) {
 	int status = 0;
@@ -103,7 +108,8 @@ void get_distance_cm(int *fd, int *values) {
 	// printf("DEBUG: Calculated distance:\t%dcm\n", values[0]);
 }
 
-/* Simple method to read the measured time of the srf02 sensor.
+/**
+ * Simple method to read the measured time of the srf02 sensor.
  *
  * @param fd 		 - This is the reference to the file handle of the opened i2c-bus.
  * @param values - This is the reference to a variable owned by the caller that will

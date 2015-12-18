@@ -5,9 +5,9 @@ PWD=.
 SOURCE=$(PWD)/$(NAME)
 $(NAME)_INCLUDE=$(PWD)/include
 # Set target device name (hostname)
-TARGET=
+TARGET=dschwarz-pi
 # Set target install path
-TARGET_PATH=
+TARGET_PATH=/home/dschwarz/$(NAME)
 
 default: build
 
@@ -22,4 +22,4 @@ sync:
 	rsync -r $(PWD) $(TARGET):$(TARGET_PATH)
 
 doc:
-	cldoc generate -- --output ./doc/ $(NAME)
+	doxygen $(PWD)/Doxyfile

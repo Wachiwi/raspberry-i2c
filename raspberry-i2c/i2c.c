@@ -24,7 +24,7 @@
 
 #include "i2c.h"
 
-/*
+/**
  * Initializing the i2c bus and the communication to a particular device
  *
  * @param address - The address of the device you want to connect to concerning the datasheet
@@ -47,7 +47,7 @@ int init_i2c(int address) {
 	return fd;
 }
 
-/*
+/**
  * Trys to open the i2c-bus device file ('/dev/i2c-1') and makes it possible to communicate
  * with the i2c-bus device/sensor
  *
@@ -68,7 +68,7 @@ int open_i2c_bus() {
 	return fd;
 }
 
-/*
+/**
  * Simple wrapper method that makes use of the native i2c fucntions and adds minor error handling.
  *
  * @param *fd 		- Pointer to a integer that contains the file handle
@@ -89,7 +89,7 @@ int read_i2c_byte_data(int* fd, uint8_t command) {
 	return result;
 }
 
-/*
+/**
  * Simple wrapper method that makes use of the native i2c fucntions and adds minor error handling.
  *
  * @param *fd 		- Pointer to a integer that contains the file handle

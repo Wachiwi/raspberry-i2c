@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-/*
+/**
  * Header file that declares some wrapper methods to simplify the usage of the i2c for this
  * application. Further all necessary headers are included.
  */

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-/*
+/**
  * Header file that defines all necessary information that is written in the datasheet.
  * Additionally there are some methods declared that offer some utility for handling
  * the srf02 sensor.
